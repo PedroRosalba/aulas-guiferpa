@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+        function getUserInputs() {
+            let array = [];
+            for (let i = 0; i < 100; i++) {
+                let userInput = prompt("Enter a value for position " + (i + 1) + ":");
+                array.push(userInput);
+            }
+            
+            for (let i = 0; i < array.length; i++) {
+                console.log("Position " + (i + 1) + ": " + array[i]);
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="getUserInputs()">Enter 100 Values</button>
+</body>
+</html>

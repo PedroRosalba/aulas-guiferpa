@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+        //getting user input
+        function getRandomNumbersArray() {
+            let userInput = prompt("Enter a number:");
+            let N = parseInt(userInput, 10);
+
+            if (!isNaN(N) && N > 0) {
+                let array = [];
+                for (let i = 0; i < N; i++) {
+                    let randomNum = Math.floor(Math.random() * 101); 
+                    array.push(randomNum);
+                }
+                
+                for (let i = 0; i < array.length; i++) {
+                    if (array[i] % 3 === 0) {
+                        console.log("Position " + (i + 1) + ": " + array[i]);
+                    }
+                }
+            } else {
+                console.log("The input is not a valid number.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="getRandomNumbersArray()">Generate Random Numbers</button>
+</body>
+</html>
