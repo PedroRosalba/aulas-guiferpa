@@ -4,7 +4,7 @@ function merge(left, right) {
     let rightIndex = 0;
 
     while (leftIndex < left.length && rightIndex < right.length) {
-        if (left[leftIndex] > right[rightIndex]) {
+        if (left[leftIndex] < right[rightIndex]) {
             result.push(left[leftIndex]);
             leftIndex++; 
 
@@ -32,3 +32,7 @@ function mergeSort(array) {
 const array = [38, 27, 43, 3, 9, 82, 10];
 const sortedArray = mergeSort(array);
 console.log(sortedArray); 
+
+
+// [2,3,9] , [3,6,9]
+// [3,]
